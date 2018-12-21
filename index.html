@@ -33,13 +33,17 @@
                 padding: 50px;
                 border-top: 3px solid #693f7e;
                 background-color: #f9f9f9;
+
+
+            }
+            .sidebar ul{
+                list-style-type: none;
             }
             .main{
                 flex: 3;
                 padding: 50px;
                 margin: 30px;
-                background-color: #f9f9f9;
-
+                box-shadow: 2px 5px 16px grey;
             }
             footer{
                 color: #fff;
@@ -77,15 +81,15 @@
             </header>
             <div class="wrapper">
                 <aside class="sidebar">
-                    <h2>Recent Post</h2>
+                    <h2>导引</h2>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li><a href="#">文章1</a></li>
+                        <li><a href="#">文章2</a></li>
+                        <li><a href="#">文章3</a></li>
                     </ul>
                 </aside>
                 <section class="main">
-
+                    <h2>正文测试</h2>
                 </section>
             </div>
             <footer>
@@ -94,7 +98,7 @@
         </div>
     </body>
     <script type="text/javascript">
-        for (var i = 0; i < 100; i++) {
+        for (var i = 0; i < 400; i++) {
             document.querySelector(".main").innerHTML += "图灵智能创新团队"
         }
     </script>
