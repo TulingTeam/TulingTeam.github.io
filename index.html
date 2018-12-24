@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>图灵智能创新团队</title>
-        <style media="screen">
-            .flex-container{
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>图灵智创</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <!-- 引入轮播图 -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/user-index.css">
+    <style>
+        .flex-container{
                 margin: 16px;
                 display:flex;
                 flex-direction: column;
                 /* 垂直显示 */
             }
-            header{
+        header{
                 display: flex;
                 /* 可以实现导航和按钮之间的自动间隔,把按钮顶到右边 */
                 justify-content: space-between;
@@ -19,43 +26,18 @@
                 border-bottom: 3px solid lightblue;
                 margin-bottom: 30px;
             }
-            header nav ul{
+        header nav ul{
                 display: flex;
                 align-items: baseline;
                 list-style-type: none;
             }
-            .wrapper{
-                display: flex;
-                flex-direction: row;
-            }
-            .sidebar{
-                flex: 1;
-                margin: 30px;
-                padding: 30px;
-                border-top: 3px solid #693f7e;
-                background-color: #f9f9f9;
-
-
-            }
-            .sidebar ul{
-                list-style-type: none;
-            }
-            .main{
-                flex: 3;
-                padding: 50px;
-                margin: 30px;
-                box-shadow: 2px 5px 16px grey;
-            }
-            footer{
-                color: #fff;
-                text-align: center;
-                padding: 20px 0;
-                margin-top: 60px;
-                padding: 20px 0;
-                background-color: #9f9c9c;
-            }
-            /* 响应式处理 */
-            @media (max-width: 600px) {
+        #carousel{
+            display: flex;
+            width: 100%;
+            height: 700px;
+        }
+        /* 响应式处理 */
+        @media (max-width: 600px) {
                 .wrapper {
                     flex-direction: column;
                 }
@@ -70,43 +52,35 @@
 
                     margin-right: 0;
                 }
+                #carousel{
+                    height: 250px;
+                }
             }
-        </style>
-    </head>
-    <body>
-        <div class="flex-container">
-            <header>
-                <nav>
-                    <ul>
-                        <li><h1>图灵智能创新团队</h1></li>
-                        <li class="logo"><a href="#"><i class="fa fa-file-code-o" aria-hidden="true"></i></a></li>
-                        <!-- <li><a href="#">About</a></li>
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <h1>图灵智能创新团队</h1>
+                    </li>
+                    <!-- <li class="logo"><a href="#"><i class="fa fa-file-code-o" aria-hidden="true"></i></a></li> -->
+                    <!-- <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li> -->
-                    </ul>
-                </nav>
-                <!-- <button>Login</button> -->
-            </header>
-            <div class="wrapper">
-                <aside class="sidebar">
-                    <h2>导引</h2>
-                    <ul>
-                        <li><a href="#">文章1</a></li>
-                        <li><a href="#">文章2</a></li>
-                        <li><a href="#">文章3</a></li>
-                    </ul>
-                </aside>
-                <section class="main">
-                    <h2>正文测试</h2>
-                </section>
-            </div>
-            <footer>
-                <h3>powered by 宋宝航</h3>
-            </footer>
-        </div>
-    </body>
-    <script type="text/javascript">
-        for (var i = 0; i < 400; i++) {
-            document.querySelector(".main").innerHTML += "图灵智能创新团队"
-        }
+                </ul>
+            </nav>
+            <!-- <button>Login</button> -->
+        </header>
+        <div id="carousel"></div>
+    </div>
+    <script src="js/carousel.js"></script>
+    <script>
+        var carousel = new Carousel({
+            wrap: document.getElementById("carousel"),
+            urlArr: ["img/1.jpeg", "img/2.jpeg", "img/3.jpeg"]
+        });
     </script>
+</body>
 </html>
